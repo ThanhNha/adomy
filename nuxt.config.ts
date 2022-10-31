@@ -2,22 +2,22 @@
 import svgLoader from 'vite-svg-loader'
 export default defineNuxtConfig({
     target: 'static',
-    components: {
-        dirs: [
-          '~/components',
-          {
-            path: '~/components/shin/',
-            prefix: 'S',
-          },
-        ],
+    components: [
+      {
+        path: '~/components', // will get any components nested in let's say /components/nested
+        pathPrefix: false,
       },
+    ],
     tailwindcss: {
     cssPath: '~/assets/scss/global.scss',
     configPath: '~/tailwind.config.js',
     viewer: false,
     },
     vite: {
-        plugins: [svgLoader()]
+        plugins: [svgLoader({
+          defaultImport: 'raw',
+        })],
+       
       },
     modules: [
         '@nuxtjs/tailwindcss',
