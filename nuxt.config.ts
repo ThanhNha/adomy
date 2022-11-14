@@ -10,8 +10,10 @@ export default defineNuxtConfig({
     ],
     tailwindcss: {
     cssPath: '~/assets/scss/global.scss',
-    configPath: '~/tailwind.config.js',
+    configPath: 'tailwind.config',
     viewer: false,
+    exposeConfig: false,
+    injectPosition: 0,
     },
     vite: {
         plugins: [svgLoader({
