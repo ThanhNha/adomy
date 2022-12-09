@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import iconRaw from "~/assets/icons/person-outline.svg?component";
+import iconRaw from "icons/person-outline.svg?component";
 
 export default {
   components: {

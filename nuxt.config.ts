@@ -1,5 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 import svgLoader from 'vite-svg-loader'
+import { resolve } from 'path'
 export default defineNuxtConfig({
     target: 'static',
     components: [
@@ -20,6 +21,9 @@ export default defineNuxtConfig({
           defaultImport: 'raw',
         })],
        
+      },
+      alias: {
+        'icons': resolve(__dirname, './assets/icons'),
       },
     modules: [
         '@nuxtjs/tailwindcss',
